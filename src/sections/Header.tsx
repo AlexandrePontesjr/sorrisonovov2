@@ -48,7 +48,7 @@ export function Header() {
           }}
           className="flex items-center gap-2"
         >
-          <img src="/logo.png" alt="Logo da clínica Sorriso Novo" className="h-12 w-22" />
+          <img src="/logo.png" alt="Logo da clínica Sorriso Novo" className="h-10 w-18" />
           {/* <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="text-coral">
             <path
               d="M12 2C8.5 2 6 4.5 6 7c0 1.5.5 2.5 1 3.5.5 1 1 2 1 3.5 0 2.5 1.5 4 2 5 .5 1 1.5 3 2 3s1.5-2 2-3c.5-1 2-2.5 2-5 0-1.5.5-2.5 1-3.5.5-1 1-2 1-3.5 0-2.5-2.5-5-6-5zm-2 5c-.5 0-1-.5-1-1s.5-1 1-1 1 .5 1 1-.5 1-1 1zm4 0c-.5 0-1-.5-1-1s.5-1 1-1 1 .5 1 1-.5 1-1 1z"
