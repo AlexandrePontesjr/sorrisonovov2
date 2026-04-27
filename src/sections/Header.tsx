@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
+import { SocialLinks } from '@/components/SocialLinks';
 
 const navLinks = [
   { label: 'Início', href: '#hero' },
@@ -78,7 +79,8 @@ export function Header() {
         </nav>
 
         {/* Desktop CTA */}
-        <div className="hidden md:block">
+        <div className="hidden md:flex items-center gap-3">
+          <SocialLinks />
           <WhatsAppButton className="text-sm py-2.5 px-5">
             Agendar
           </WhatsAppButton>
@@ -116,6 +118,7 @@ export function Header() {
               </a>
             ))}
             <div className="mt-auto pt-6 border-t border-slate-100">
+              <SocialLinks className="mb-4 justify-center" linkClassName="h-10 w-10" />
               <WhatsAppButton className="w-full justify-center">
                 Agendar
               </WhatsAppButton>
