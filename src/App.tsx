@@ -7,6 +7,7 @@ import { Depoimentos } from '@/sections/Depoimentos';
 import { Contato } from '@/sections/Contato';
 import { Footer } from '@/sections/Footer';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
+import { AppointmentChatbot } from '@/components/AppointmentChatbot';
 
 function App() {
   const [showFloating, setShowFloating] = useState(false);
@@ -31,6 +32,7 @@ function App() {
       </main>
       <Footer />
       {showFloating && <WhatsAppButton variant="floating" />}
+      <AppointmentChatbot />
     </div>
   );
 }

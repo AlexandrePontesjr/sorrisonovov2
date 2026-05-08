@@ -11,7 +11,7 @@ const services = [
     icon: Sparkles,
     title: 'Limpeza Dental',
     description: 'Remoção de tártaro e placa bacteriana para manter seus dentes saudáveis e seu hálito fresco.',
-    image: '/servico-limpeza.jpg',
+    image: '/servico-limpeza.webp',
   },
   {
     icon: Sun,
@@ -35,13 +35,13 @@ const services = [
     icon: AlertCircle,
     title: 'Atendimento de Urgência',
     description: 'Dor de dente, trauma ou inflamação? Atendimento rápido para aliviar seu desconforto.',
-    image: '/servico-urgencia.jpg',
+    image: '/servico-urgencia.webp',
   },
   {
     icon: Baby,
     title: 'Odontopediatria',
     description: 'Cuidado especializado para crianças, com ambiente acolhedor e profissionais preparados.',
-    image: '/servico-odonto-ped.jpg',
+    image: '/servico-odonto-ped.webp',
   },
 ];
 

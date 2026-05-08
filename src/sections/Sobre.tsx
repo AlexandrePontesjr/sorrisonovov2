@@ -13,6 +13,27 @@ const differentials = [
   'Protocolos rigorosos de biossegurança',
 ];
 
+const aboutImages = [
+  {
+    src: '/equipe-dentistas.webp',
+    alt: 'Equipe de dentistas da Clínica Sorriso Novo',
+    className: 'lg:col-span-2',
+    imageClassName: 'aspect-video',
+  },
+  {
+    src: '/mesa-clinaca.webp',
+    alt: 'Mesa de atendimento da clínica odontológica',
+    className: 'lg:-rotate-[2deg]',
+    imageClassName: 'aspect-[4/3]',
+  },
+  {
+    src: '/mesa-linica-2.webp',
+    alt: 'Ambiente de atendimento da Clínica Sorriso Novo',
+    className: 'lg:rotate-[2deg]',
+    imageClassName: 'aspect-[4/3]',
+  },
+];
+
 export function Sobre() {
   const sectionRef = useRef<HTMLElement>(null);
   const leftRef = useRef<HTMLDivElement>(null);
@@ -124,21 +145,19 @@ export function Sobre() {
 
           {/* Images Column */}
           <div ref={rightRef} className="opacity-0 order-1 lg:order-2">
-            <div className="grid gap-4">
-              <div className="rounded-xl overflow-hidden shadow-lg">
-                <img
-                  src="/equipe.jpg"
-                  alt="Equipe de dentistas"
-                  className="w-full aspect-video object-cover"
-                />
-              </div>
-              <div className="rounded-xl overflow-hidden shadow-lg lg:rotate-[2deg]">
-                <img
-                  src="/consultorio2.jpg"
-                  alt="Recepção da clínica"
-                  className="w-full aspect-video object-cover"
-                />
-              </div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {aboutImages.map((image) => (
+                <div
+                  key={image.src}
+                  className={`overflow-hidden rounded-xl shadow-lg ${image.className}`}
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className={`w-full object-cover ${image.imageClassName}`}
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>

@@ -43,6 +43,29 @@ export default defineConfig([
 ])
 ```
 
+## Clinic booking assistant
+
+This project includes a floating scheduling chatbot backed by Google Calendar.
+
+### Local development
+
+- `npm run dev:full` starts the Vite frontend and the booking API together.
+- `npm run dev` still starts only the frontend.
+
+### Required Google Calendar env vars
+
+- `GOOGLE_CALENDAR_ID`
+- `GOOGLE_SERVICE_ACCOUNT_EMAIL`
+- `GOOGLE_PRIVATE_KEY`
+
+### Optional env vars
+
+- `GOOGLE_CREDENTIALS_JSON`
+- `GOOGLE_CALENDAR_TIMEZONE`
+- `GOOGLE_CLINIC_NAME`
+- `GOOGLE_CLINIC_LOCATION`
+- `GOOGLE_APPOINTMENT_DURATION_MINUTES`
+
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
 ```js

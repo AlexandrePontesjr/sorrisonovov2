@@ -1,8 +1,9 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { MapPin, Clock, Phone, Mail } from 'lucide-react';
+import { Clock, Mail, MapPin, MessageCircleMore, Phone } from 'lucide-react';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
+import { openClinicScheduler } from '@/lib/scheduler-events';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -111,9 +112,19 @@ export function Contato() {
               <p className="font-inter text-sm text-dark-light mb-5">
                 Resposta rápida. Agende sua consulta em poucos minutos.
               </p>
-              <WhatsAppButton className="w-full sm:w-auto justify-center">
-                Iniciar conversa
-              </WhatsAppButton>
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <WhatsAppButton className="w-full sm:w-auto justify-center">
+                  Iniciar conversa
+                </WhatsAppButton>
+                <button
+                  type="button"
+                  onClick={openClinicScheduler}
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-3xl border border-coral/25 bg-white px-6 py-3 font-inter text-[15px] font-semibold text-coral transition-colors duration-200 hover:border-coral hover:bg-coral/5"
+                >
+                  <MessageCircleMore className="h-4 w-4" />
+                  Abrir chatbot
+                </button>
+              </div>
             </div>
           </div>
 

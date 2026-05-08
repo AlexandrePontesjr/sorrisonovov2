@@ -1,9 +1,26 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
-import { Award, CalendarCheck, Sparkles, Star, Users } from 'lucide-react';
+import { Award, CalendarCheck, MessageCircleMore, Sparkles, Star, Users } from 'lucide-react';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
+import { openClinicScheduler } from '@/lib/scheduler-events';
+
+const heroImages = [
+  {
+    src: '/dentista-1.webp',
+    alt: 'Dentista da clínica Sorriso Novo em atendimento odontológico',
+  },
+  {
+    src: '/dentista-2.webp',
+    alt: 'Dentista da clínica Sorriso Novo sorrindo no consultório',
+  },
+  {
+    src: '/dentista-3.webp',
+    alt: 'Dentista da clínica Sorriso Novo em consultório odontológico',
+  },
+];
 
 export function Hero() {
+  const [currentHeroImage, setCurrentHeroImage] = useState(0);
   const sectionRef = useRef<HTMLElement>(null);
   const labelRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -25,6 +42,14 @@ export function Hero() {
     }, sectionRef);
 
     return () => ctx.revert();
+  }, []);
+
+  useEffect(() => {
+    const intervalId = window.setInterval(() => {
+      setCurrentHeroImage((current) => (current + 1) % heroImages.length);
+    }, 3000);
+
+    return () => window.clearInterval(intervalId);
   }, []);
 
   const handleScrollToServices = () => {
@@ -108,6 +133,15 @@ export function Hero() {
               </button>
             </div>
 
+            <button
+              type="button"
+              onClick={openClinicScheduler}
+              className="mt-4 inline-flex items-center gap-2 font-inter text-sm font-semibold text-dark-light transition-colors duration-200 hover:text-coral lg:justify-start"
+            >
+              <MessageCircleMore className="h-4 w-4" />
+              Abrir assistente de agendamento
+            </button>
+
             {/* Trust Indicators */}
             <div
               ref={trustRef}
@@ -160,10 +194,28 @@ export function Hero() {
 
               <div className="relative aspect-[4/5] overflow-hidden rounded-[32px] border-[10px] border-white bg-white shadow-[0_28px_70px_rgba(30,41,59,0.18)]">
                 <img
-                  src="/Dr-Dani.jpeg"
+                  src={heroImages[0].src}
+                  aria-hidden={currentHeroImage !== 0}
                   alt="Dentista da clínica Sorriso Novo em consultório odontológico"
-                  className="h-full w-full object-cover object-[50%_35%]"
+                  className={`absolute inset-0 h-full w-full object-cover object-[50%_35%] transition-opacity duration-700 ${
+                    currentHeroImage === 0 ? 'opacity-100' : 'opacity-0'
+                  }`}
                 />
+                {heroImages.slice(1).map((image, index) => {
+                  const imageIndex = index + 1;
+
+                  return (
+                    <img
+                      key={image.src}
+                      src={image.src}
+                      alt={image.alt}
+                      aria-hidden={imageIndex !== currentHeroImage}
+                      className={`absolute inset-0 h-full w-full object-cover object-[50%_35%] transition-opacity duration-700 ${
+                        imageIndex === currentHeroImage ? 'opacity-100' : 'opacity-0'
+                      }`}
+                    />
+                  );
+                })}
               </div>
 
               <div className="absolute left-6 bottom-8 hidden max-w-[210px] rounded-2xl bg-white px-5 py-4 shadow-card-hover sm:block">
