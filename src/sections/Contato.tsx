@@ -1,9 +1,8 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Clock, Mail, MapPin, MessageCircleMore, Phone } from 'lucide-react';
+import { Clock, Mail, MapPin, Phone } from 'lucide-react';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
-import { openClinicScheduler } from '@/lib/scheduler-events';
 
 gsap.registerPlugin(ScrollTrigger);
 
