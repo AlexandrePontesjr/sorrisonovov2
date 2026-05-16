@@ -3,11 +3,10 @@ import { Header } from '@/sections/Header';
 import { Hero } from '@/sections/Hero';
 import { Servicos } from '@/sections/Servicos';
 import { Sobre } from '@/sections/Sobre';
-import { Depoimentos } from '@/sections/Depoimentos';
+import { Depoimentos } from './sections/Depoimentos';
 import { Contato } from '@/sections/Contato';
 import { Footer } from '@/sections/Footer';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
-import { AppointmentChatbot } from '@/components/AppointmentChatbot';
 
 function App() {
   const [showFloating, setShowFloating] = useState(false);
@@ -32,7 +31,6 @@ function App() {
       </main>
       <Footer />
       {showFloating && <WhatsAppButton variant="floating" />}
-      <AppointmentChatbot />
     </div>
   );
 }

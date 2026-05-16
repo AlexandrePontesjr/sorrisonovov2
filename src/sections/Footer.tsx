@@ -4,7 +4,7 @@ const quickLinks = [
   { label: 'Início', href: '#hero' },
   { label: 'Serviços', href: '#servicos' },
   { label: 'Sobre', href: '#sobre' },
-  { label: 'Depoimentos', href: '#depoimentos' },
+  { label: 'Plano', href: '#plano-tratamento' },
   { label: 'Contato', href: '#contato' },
 ];
 
@@ -30,12 +30,7 @@ export function Footer() {
           {/* Logo & Description */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-coral">
-                <path
-                  d="M12 2C8.5 2 6 4.5 6 7c0 1.5.5 2.5 1 3.5.5 1 1 2 1 3.5 0 2.5 1.5 4 2 5 .5 1 1.5 3 2 3s1.5-2 2-3c.5-1 2-2.5 2-5 0-1.5.5-2.5 1-3.5.5-1 1-2 1-3.5 0-2.5-2.5-5-6-5zm-2 5c-.5 0-1-.5-1-1s.5-1 1-1 1 .5 1 1-.5 1-1 1zm4 0c-.5 0-1-.5-1-1s.5-1 1-1 1 .5 1 1-.5 1-1 1z"
-                  fill="currentColor"
-                />
-              </svg>
+              <img src="/logo.png" alt="Logo da clínica Sorriso Novo" className="h-10 w-18" />
               <span className="font-playfair text-xl font-bold">SORRISO NOVO</span>
             </div>
             <p className="font-inter text-sm text-dark-muted leading-relaxed">
@@ -69,7 +64,7 @@ export function Footer() {
             <h4 className="font-inter text-base font-semibold mb-4">Contato</h4>
             <ul className="space-y-2.5">
               <li className="font-inter text-sm text-dark-muted">
-                (92) 98501-2772
+                (92) 98188-7734
               </li>
               <li className="font-inter text-sm text-dark-muted">
                 odonto.sorriso.novo.manaus1@gmail.com
@@ -107,9 +102,9 @@ export function Footer() {
           <p className="font-inter text-xs text-slate-500 text-center sm:text-left">
             © 2026 Clínica SORRISO NOVO. Todos os direitos reservados.
           </p>
-          <p className="font-inter text-xs text-slate-500">
+          {/* <p className="font-inter text-xs text-slate-500">
             CRO-AM 12345 | Política de Privacidade
-          </p>
+          </p> */}
         </div>
       </div>
     </footer>

@@ -18,7 +18,7 @@ const contactInfo = [
   },
   {
     icon: Phone,
-    text: '(92) 98501-2772',
+    text: '(92) 98188-7734',
   },
   {
     icon: Mail,
@@ -116,14 +116,6 @@ export function Contato() {
                 <WhatsAppButton className="w-full sm:w-auto justify-center">
                   Iniciar conversa
                 </WhatsAppButton>
-                <button
-                  type="button"
-                  onClick={openClinicScheduler}
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-3xl border border-coral/25 bg-white px-6 py-3 font-inter text-[15px] font-semibold text-coral transition-colors duration-200 hover:border-coral hover:bg-coral/5"
-                >
-                  <MessageCircleMore className="h-4 w-4" />
-                  Abrir chatbot
-                </button>
               </div>
             </div>
           </div>

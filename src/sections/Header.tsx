@@ -49,12 +49,7 @@ export function Header() {
           className="flex items-center gap-2"
         >
           <img src="/logo.png" alt="Logo da clínica Sorriso Novo" className="h-10 w-18" />
-          {/* <span className="font-playfair text-2xl font-bold leading-none">
-            <span className="text-coral">SORRISO</span>{' '}
-            <span className="text-yellow-brand">NOVO</span>
-          </span> */}
         </a>
-
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (

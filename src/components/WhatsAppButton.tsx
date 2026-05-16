@@ -4,7 +4,7 @@ interface WhatsAppButtonProps {
   children?: React.ReactNode;
 }
 
-const WHATSAPP_LINK = 'https://wa.me/5592985012772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta.';
+const WHATSAPP_LINK = 'https://wa.me/5592981887734?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta.';
 
 export function WhatsAppButton({ variant = 'primary', className = '', children }: WhatsAppButtonProps) {
   if (variant === 'floating') {

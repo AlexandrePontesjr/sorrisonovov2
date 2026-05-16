@@ -9,17 +9,17 @@ const testimonials = [
   {
     quote: 'Atendimento excelente! Fiz o clareamento e o resultado superou minhas expectativas. A equipe é muito atenciosa e o ambiente é super acolhedor.',
     name: 'Ana Carolina M.',
-    avatar: '/avatar-ana.jpg',
+    avatar: '/mundica.webp',
   },
   {
     quote: 'Levei meu filho de 5 anos para a primeira consulta e ele adorou! A dentista foi super paciente e divertida. Indico para todas as mamães!',
     name: 'Patrícia L.',
-    avatar: '/avatar-patricia.jpg',
+    avatar: '/Dani-crianca.webp',
   },
   {
-    quote: 'Fiz o implante com o Dr. Ricardo e o resultado ficou perfeito. Processo tranquilo, sem dor e com acompanhamento de primeira.',
+    quote: 'Fiz o implante com o Dra. Daniela e o resultado ficou perfeito. Processo tranquilo, sem dor e com acompanhamento de primeira.',
     name: 'Marcos S.',
-    avatar: '/avatar-marcos.jpg',
+    avatar: '/Koreano.webp',
   },
 ];
 
@@ -142,9 +142,9 @@ export function Depoimentos() {
                   alt={testimonial.name}
                   className="w-12 h-12 rounded-full object-cover"
                 />
-                <span className="font-inter text-base font-semibold text-dark">
+                {/* <span className="font-inter text-base font-semibold text-dark">
                   {testimonial.name}
-                </span>
+                </span> */}
               </div>
             </div>
           ))}
