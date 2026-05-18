@@ -137,7 +137,7 @@ export function Sobre() {
 
             {/* CTA */}
             <div className="mt-8">
-              <WhatsAppButton>
+              <WhatsAppButton intent="schedule">
                 Agendar consulta
               </WhatsAppButton>
             </div>

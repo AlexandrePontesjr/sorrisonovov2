@@ -70,7 +70,7 @@ export function Header() {
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
           <SocialLinks />
-          <WhatsAppButton className="text-sm py-2.5 px-5">
+          <WhatsAppButton intent="schedule" className="text-sm py-2.5 px-5">
             Agendar
           </WhatsAppButton>
         </div>
@@ -108,7 +108,7 @@ export function Header() {
             ))}
             <div className="mt-auto pt-6 border-t border-slate-100">
               <SocialLinks className="mb-4 justify-center" linkClassName="h-10 w-10" />
-              <WhatsAppButton className="w-full justify-center">
+              <WhatsAppButton intent="schedule" className="w-full justify-center">
                 Agendar
               </WhatsAppButton>
             </div>

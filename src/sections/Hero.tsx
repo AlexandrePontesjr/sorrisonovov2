@@ -132,16 +132,6 @@ export function Hero() {
                 Ver serviços
               </button>
             </div>
-
-            <button
-              type="button"
-              onClick={openClinicScheduler}
-              className="mt-4 inline-flex items-center gap-2 font-inter text-sm font-semibold text-dark-light transition-colors duration-200 hover:text-coral lg:justify-start"
-            >
-              <MessageCircleMore className="h-4 w-4" />
-              Abrir assistente de agendamento
-            </button>
-
             {/* Trust Indicators */}
             <div
               ref={trustRef}

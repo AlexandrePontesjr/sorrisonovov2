@@ -110,7 +110,7 @@ export function PlanoTratamento() {
             </div>
 
             <div className="mt-9">
-              <WhatsAppButton>
+              <WhatsAppButton intent="schedule">
                 Agendar avaliação
               </WhatsAppButton>
             </div>
