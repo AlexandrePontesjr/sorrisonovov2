@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
-import { Award, CalendarCheck, MessageCircleMore, Sparkles, Star, Users } from 'lucide-react';
+import { Award, CalendarCheck, Sparkles, Star, Users } from 'lucide-react';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
-import { openClinicScheduler } from '@/lib/scheduler-events';
 
 const heroImages = [
   {
