@@ -121,6 +121,9 @@ export function Hero() {
               ref={ctaRef}
               className="mt-10 flex flex-col items-center justify-center gap-4 opacity-0 sm:flex-row lg:justify-start"
             >
+              <WhatsAppButton intent="schedule">
+                Agendar consulta
+              </WhatsAppButton>
               <WhatsAppButton>
                 Falar no WhatsApp
               </WhatsAppButton>
