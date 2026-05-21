@@ -1,17 +1,23 @@
-import { Instagram, Facebook, MessageCircle } from 'lucide-react';
+import { Facebook, Instagram } from 'lucide-react';
 
 const quickLinks = [
   { label: 'Início', href: '#hero' },
   { label: 'Serviços', href: '#servicos' },
   { label: 'Sobre', href: '#sobre' },
-  { label: 'Plano', href: '#plano-tratamento' },
   { label: 'Contato', href: '#contato' },
 ];
 
 const socialLinks = [
-  { icon: Instagram, label: 'Instagram' },
-  { icon: Facebook, label: 'Facebook' },
-  { icon: MessageCircle, label: 'WhatsApp' },
+  {
+    icon: Facebook,
+    label: 'Facebook',
+    href: 'https://www.facebook.com/share/14Zh2vwUvTQ/?mibextid=wwXIfr',
+  },
+  {
+    icon: Instagram,
+    label: 'Instagram',
+    href: 'https://www.instagram.com/clinicasorriso_novo?igsh=bjk3NnZubnN6amdw',
+  },
 ];
 
 export function Footer() {
@@ -84,10 +90,12 @@ export function Footer() {
                 return (
                   <a
                     key={social.label}
-                    href="#"
-                    onClick={(e) => e.preventDefault()}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-dark-muted hover:text-coral hover:bg-white/15 transition-all duration-200"
                     aria-label={social.label}
+                    title={social.label}
                   >
                     <Icon className="w-5 h-5" />
                   </a>
