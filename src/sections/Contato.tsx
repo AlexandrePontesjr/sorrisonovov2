@@ -25,6 +25,36 @@ const contactInfo = [
   },
 ];
 
+const address = 'Rua Índio Ajuricaba, 22, Zumbi dos Palmares, Manaus AM, 69086-397, Brasil';
+const encodedAddress = encodeURIComponent(address);
+const mapShortcuts = [
+  {
+    label: 'Google Maps',
+    href: `https://www.google.com/maps/dir/?api=1&destination=${encodedAddress}`,
+    title: 'Abrir rota no Google Maps',
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden="true">
+        <path
+          fill="currentColor"
+          d="M12 2c-3.31 0-6 2.69-6 6 0 4.5 6 14 6 14s6-9.5 6-14c0-3.31-2.69-6-6-6Zm0 8.2A2.2 2.2 0 1 1 12 5.8a2.2 2.2 0 0 1 0 4.4Z"
+        />
+      </svg>
+    ),
+  },
+  {
+    label: 'Waze',
+    href: `https://waze.com/ul?q=${encodedAddress}&navigate=yes`,
+    title: 'Abrir rota no Waze',
+    icon: <img src="/waze-64.png" alt="" aria-hidden="true" className="h-4 w-4 object-contain" />,
+  },
+  {
+    label: 'Uber',
+    href: `https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=${encodedAddress}`,
+    title: 'Abrir rota no Uber',
+    icon: <img src="/uber-50.png" alt="" aria-hidden="true" className="h-4 w-4 object-contain" />,
+  },
+];
+
 export function Contato() {
   const sectionRef = useRef<HTMLElement>(null);
   const leftRef = useRef<HTMLDivElement>(null);
@@ -101,6 +131,27 @@ export function Contato() {
                   </div>
                 );
               })}
+            </div>
+
+            <div className="mt-8">
+              <p className="font-inter text-sm font-semibold uppercase tracking-[0.08em] text-dark-light">
+                Como chegar
+              </p>
+              <div className="mt-4 flex flex-wrap gap-3">
+                {mapShortcuts.map((shortcut) => (
+                  <a
+                    key={shortcut.label}
+                    href={shortcut.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={shortcut.title}
+                    className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2.5 font-inter text-sm font-semibold text-dark transition-all duration-200 hover:-translate-y-0.5 hover:border-coral/40 hover:text-dark hover:shadow-card"
+                  >
+                    {shortcut.icon}
+                    <span>{shortcut.label}</span>
+                  </a>
+                ))}
+              </div>
             </div>
 
             {/* WhatsApp CTA Box */}

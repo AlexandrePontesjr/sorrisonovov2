@@ -36,7 +36,7 @@ export function WhatsAppButton({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className={`fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-whatsapp text-white rounded-full shadow-whatsapp transition-all duration-300 hover:bg-whatsapp-dark hover:scale-105 animate-pulse-whatsapp ${className}`}
+        className={`floating-whatsapp fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-whatsapp text-white rounded-full shadow-whatsapp transition-all duration-300 hover:bg-whatsapp-dark hover:scale-105 animate-pulse-whatsapp ${className}`}
         aria-label={label}
       >
         {icon}
@@ -49,7 +49,7 @@ export function WhatsAppButton({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center gap-2 px-7 py-3.5 bg-whatsapp text-white font-inter font-semibold text-[15px] rounded-3xl shadow-whatsapp transition-all duration-200 hover:bg-whatsapp-dark hover:shadow-lg active:scale-[0.98] ${className}`}
+      className={`inline-flex items-center gap-2 px-7 py-3.5 bg-[#10B981] text-white font-inter font-semibold text-[15px] rounded-3xl shadow-[0_18px_40px_rgba(16,185,129,0.28)] transition-all duration-200 hover:bg-[#0F9A72] hover:shadow-[0_20px_44px_rgba(16,185,129,0.34)] active:scale-[0.98] ${className}`}
     >
       {icon}
       {children || (isSchedule ? 'Agendar consulta' : 'Agendar pelo WhatsApp')}
