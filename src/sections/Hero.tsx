@@ -86,7 +86,7 @@ export function Hero() {
             >
               <span className="h-px w-8 bg-coral" />
               <span className="font-inter text-xs font-semibold uppercase tracking-[0.08em] text-coral">
-                Clínica odontológica
+                Clínica odontológica em Manaus
               </span>
             </div>
 
@@ -95,14 +95,14 @@ export function Hero() {
               className="font-playfair text-4xl font-bold leading-[1.04] tracking-tight text-dark opacity-0 sm:text-5xl lg:text-[56px]"
               style={{ textShadow: '0 2px 12px rgba(255,255,255,0.6)' }}
             >
-              Volte a sorrir com segurança em cada detalhe
+              Clínica Sorriso Novo, a melhor em Manaus para cuidar do seu sorriso
             </h1>
 
             <p
               ref={subtitleRef}
               className="mx-auto mt-5 max-w-[540px] font-inter text-lg leading-relaxed text-dark-light opacity-0 lg:mx-0"
             >
-              Cuidado odontológico acolhedor, planejamento claro e tecnologia moderna para você tratar, prevenir e transformar seu sorriso sem adiar mais.
+              Cuidado odontológico acolhedor, planejamento claro e tecnologia moderna para quem procura dentista em Manaus e quer encontrar a Sorriso Novo.
             </p>
 
             <div className="mt-5 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
